@@ -41,7 +41,7 @@ class StartPage(tk.Frame):
         label1.pack(fill="both", expand="yes")
 
     def next(self):
-        REMOTE_SERVER = "www.google.com"
+        REMOTE_SERVER = "www.facebook.com"
         try:
             host = socket.gethostbyname(REMOTE_SERVER)
             s = socket.create_connection((host, 80), 2)
