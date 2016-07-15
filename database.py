@@ -66,17 +66,17 @@ cursor.execute("""
 cnx.commit()
 
 #query
-query = "SELECT * FROM AdminUsers"
+query = "SELECT user_no, emailad, uname, new_pin FROM AdminUsers"
 
 cursor.execute(query)
-res = cursor.fetchall()
-for row in res:
-    user_no = row[0]
-    emailad = row[1]
-    uname = row[2]
-    new_pin = row[3]
-print ("User No. = %s, Email Address = %s, Username = %s, Pin = %s" % \
-          (user_no, emailad, uname, new_pin))
-
+records = cursor.fetchall()
+for row in records:
+    #user_no = row[0]
+    #emailad = row[1]
+    #uname = row[2]
+    #new_pin = row[3]
+#print ("User No. = %s, Email Address = %s, Username = %s, Pin = %s" % \
+          #(user_no, emailad, uname, new_pin))
+    print (row)
 cursor.close()
 cnx.close()
